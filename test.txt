@@ -1,0 +1,15 @@
+int main(int argc,char *argv[])
+{
+   float a=108.8;
+   int b=6;
+   ++argv;--argc;
+   if (argc>0)
+   {
+        yyin = fopen(argv[0],"r");
+   }
+   else yyin=stdin;
+   yylex();
+   printf("%5d chars and %5d lines",num_chars,num_lines);
+   return 0;
+
+}
